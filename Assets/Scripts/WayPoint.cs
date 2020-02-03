@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WayPoint : MonoBehaviour
-{
+{   [Tooltip("Animation that will be played when NPC reaches this waypoint")]
     public AnimationClip arrivingAnimation;
     [Header("Delay boundaries")]
     public float minimalDelay;
@@ -34,14 +34,6 @@ public class WayPoint : MonoBehaviour
         actualDelay = Random.Range(minimalDelay, maximalDelay);
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-   
 
     public float GetSpeedOfMovement()
     {

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -44,10 +45,12 @@ public class NPC : MonoBehaviour
         }
 
     }
+
     private void AssignSpeed(WayPoint wayPoint)
     {
         navMeshAgent.speed = initialSpeed * wayPoint.GetSpeedOfMovement();
     }
+
     private void AssignDestination(WayPoint destination)
     {
         if (destination != null)
@@ -60,6 +63,7 @@ public class NPC : MonoBehaviour
             navMeshAgent.isStopped = true;
         }
     }
+
     public IEnumerator PerformAnimationAfterDelay(WayPoint targetWayPoint)
     {
         int amount = targetWayPoint.loopsAmount;
@@ -88,6 +92,7 @@ public class NPC : MonoBehaviour
         }
         navMeshAgent.isStopped = false;
     }
+
     [ContextMenu("Go To the Next Point")]
     public void GoToNextPoint() /* function that is called by WayPoint class to go to  next point*/
     {

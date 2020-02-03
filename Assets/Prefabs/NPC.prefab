@@ -1257,6 +1257,7 @@ GameObject:
   - component: {fileID: 7014203526866688342}
   - component: {fileID: 5379483778781086689}
   - component: {fileID: 6849661109808706468}
+  - component: {fileID: 2911660397166166383}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -1324,9 +1325,7 @@ MonoBehaviour:
   idle: {fileID: -203655887218126122, guid: 6f9c39e2fe185064e9cfb792461a22da, type: 3}
   action: {fileID: -203655887218126122, guid: 0aeacc7e60a33064ea3868c7c553769e, type: 3}
   wayPoint: {fileID: 0}
-  initialSpeed: 7
-  hasToWaitForFunction: 0
-  canMove: 0
+  initialSpeed: 3
 --- !u!195 &6849661109808706468
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1336,11 +1335,11 @@ NavMeshAgent:
   m_GameObject: {fileID: 4145052083704038975}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 7
+  m_Radius: 1
+  m_Speed: 3
   m_Acceleration: 1
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 360
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -1349,6 +1348,20 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &2911660397166166383
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4145052083704038975}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.41
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.81, z: 0}
 --- !u!1 &4188768945402383557
 GameObject:
   m_ObjectHideFlags: 0
